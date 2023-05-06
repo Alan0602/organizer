@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========== Start Section ========== --
+
+    <link rel="stylesheet" href="style.css">    
+    !-- ========== End Section ========== -->
+    <style>
+        *
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+img{
+    z-index: -2;
+    background-size: cover;
+}
+.cube
+{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotateX(30deg) rotateY(0deg);
+       }
+    100%{
+        transform: rotateX(-360deg) rotateY(360deg);
+        }
+    }
+.cube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    transform-style: preserve-3d;
+}
+.cube div span{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(black,rgb(238, 42, 42));
+    transform: rotateY(calc(90deg*var(--i))) translateZ(150px);
+}
+h1{
+    font-size: xx-large;
+    color: rgb(254, 254, 254);
+    z-index: 9;
+    justify-content: center; 
+    align-items: center; 
+    font-style:italic; 
+}
+    </style>
+    <title>simple animations</title>
+</head>
+<body>
+       <div class="cube">
+    <div>
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+</div> 
+<h1> O r g a n i z e r . . .</h1>
+</body>
+</html>
