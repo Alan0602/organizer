@@ -20,11 +20,22 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: black;
+    /* background-image: url("https://github.com/Alan0602/simple-website/blob/main/home.jpg?raw=true"); */
 }
-img{
-    z-index: -2;
-    background-size: cover;
+.home{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.homepage{
+    width: 100%;
+    position: relative;
+    object-fit: cover;
 }
 .cube
 {
@@ -32,14 +43,14 @@ img{
     width: 250px;
     height: 250px;
     transform-style: preserve-3d;
-    animation: animate 4s linear infinite;
+    animation: animate 6s linear infinite;
 }
 @keyframes animate {
     0% {
-        transform: rotateX(30deg) rotateY(0deg);
+        transform: rotateX(360deg) rotateY(0deg);
        }
     100%{
-        transform: rotateX(-360deg) rotateY(360deg);
+        transform: rotateX(-90deg) rotateY(360deg);
         }
     }
 .cube div{
@@ -56,29 +67,52 @@ img{
     left: 0;
     width: 50%;
     height: 50%;
-    background: linear-gradient(black,rgb(238, 42, 42));
-    transform: rotateY(calc(90deg*var(--i))) translateZ(150px);
+    background: linear-gradient(rgb(227, 238, 174),rgb(92, 85, 85));
+    transform: rotateY(calc(60deg*var(--i))) translateZ(90px);
 }
 h1{
-    font-size: xx-large;
-    color: rgb(254, 254, 254);
+    font-size: 5rem;
+    color: rgb(237, 237, 233);
     z-index: 9;
+    font-style:italic; 
+    text-shadow:10cm;
+}
+.main{
     justify-content: center; 
     align-items: center; 
-    font-style:italic; 
+}
+.hero-text{
+    font-size: 2rem;
+    background: linear-gradient(rgb(159, 249, 245),rgb(216, 221, 222));
+    width: 11rem;
+    border-radius: 30%; 
+    height: 3rem;
+    box-shadow: inset;
+    text-align: center;
 }
     </style>
     <title>simple animations</title>
 </head>
 <body>
-       <div class="cube">
+   <div class="home">
+    <img class="hompage" src="https://github.com/Alan0602/simple-website/blob/main/hom2.jpg?raw=true" alt="home">
+   </div> 
+ <div class="cube">
     <div>
         <span style="--i:0;"></span>
         <span style="--i:1;"></span>
         <span style="--i:2;"></span>
         <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+
     </div>
 </div> 
-<h1> O r g a n i z e r . . .</h1>
+<h1 class="main"> O r g a n i z e r  <br><br>
+<div class="hero-text">
+    <a href="">Get Started</a>
+  </div>
+</h1>
+
 </body>
 </html>
